@@ -1,0 +1,17 @@
+server:
+  port: 8002
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:dcbapp
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    databasePlatform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        format_sql: true
+    show_sql: true

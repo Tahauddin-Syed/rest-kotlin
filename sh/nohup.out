@@ -1,0 +1,177 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-04-08T10:46:06.897+03:00  INFO 34210 --- [           main] c.t.s.r.RestKotlinApplicationKt          : Starting RestKotlinApplicationKt v0.0.1-SNAPSHOT using Java 17.0.6 with PID 34210 (/home/syed/Desktop/kotlin-ws/rest-kotlin/target/kotlin-rest.jar started by syed in /home/syed/Desktop/kotlin-ws/rest-kotlin/sh)
+2023-04-08T10:46:06.901+03:00  INFO 34210 --- [           main] c.t.s.r.RestKotlinApplicationKt          : No active profile set, falling back to 1 default profile: "default"
+2023-04-08T10:46:09.670+03:00  INFO 34210 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-08T10:46:09.851+03:00  INFO 34210 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
+2023-04-08T10:46:11.210+03:00  INFO 34210 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2023-04-08T10:46:11.231+03:00  INFO 34210 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-08T10:46:11.231+03:00  INFO 34210 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-08T10:46:11.347+03:00  INFO 34210 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-08T10:46:11.372+03:00  INFO 34210 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4288 ms
+2023-04-08T10:46:11.586+03:00  INFO 34210 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-08T10:46:12.064+03:00  INFO 34210 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:dcbapp user=SA
+2023-04-08T10:46:12.067+03:00  INFO 34210 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-08T10:46:12.103+03:00  INFO 34210 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dcbapp'
+2023-04-08T10:46:12.494+03:00  INFO 34210 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-08T10:46:12.570+03:00  INFO 34210 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-08T10:46:13.016+03:00  INFO 34210 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table if exists users_table cascade 
+Hibernate: 
+    
+    drop sequence if exists users_table_seq
+Hibernate: create sequence users_table_seq start with 1 increment by 50
+Hibernate: 
+    
+    create table users_table (
+       id bigint not null,
+        email varchar(255),
+        first_name varchar(255),
+        last_name varchar(255),
+        primary key (id)
+    )
+2023-04-08T10:46:14.097+03:00  INFO 34210 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-08T10:46:14.112+03:00  INFO 34210 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-08T10:46:14.947+03:00  WARN 34210 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-08T10:46:16.272+03:00  INFO 34210 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-08T10:46:16.420+03:00  INFO 34210 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
+2023-04-08T10:46:16.462+03:00  INFO 34210 --- [           main] c.t.s.r.RestKotlinApplicationKt          : Started RestKotlinApplicationKt in 10.646 seconds (process running for 11.591)
+Hibernate: 
+    select
+        next value for users_table_seq
+Hibernate: 
+    select
+        next value for users_table_seq
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users_table u1_0
+Users Saved into DB :: 4
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2023-04-08T10:53:30.847+03:00  INFO 35708 --- [           main] c.t.s.r.RestKotlinApplicationKt          : Starting RestKotlinApplicationKt v0.0.1-SNAPSHOT using Java 17.0.6 with PID 35708 (/home/syed/Desktop/kotlin-ws/rest-kotlin/target/kotlin-rest.jar started by syed in /home/syed/Desktop/kotlin-ws/rest-kotlin/sh)
+2023-04-08T10:53:30.852+03:00  INFO 35708 --- [           main] c.t.s.r.RestKotlinApplicationKt          : No active profile set, falling back to 1 default profile: "default"
+2023-04-08T10:53:32.986+03:00  INFO 35708 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-08T10:53:33.101+03:00  INFO 35708 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
+2023-04-08T10:53:34.316+03:00  INFO 35708 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2023-04-08T10:53:34.334+03:00  INFO 35708 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-08T10:53:34.334+03:00  INFO 35708 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-08T10:53:34.486+03:00  INFO 35708 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-04-08T10:53:34.490+03:00  INFO 35708 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3498 ms
+2023-04-08T10:53:34.807+03:00  INFO 35708 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-08T10:53:35.248+03:00  INFO 35708 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:dcbapp user=SA
+2023-04-08T10:53:35.251+03:00  INFO 35708 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-08T10:53:35.276+03:00  INFO 35708 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:dcbapp'
+2023-04-08T10:53:35.644+03:00  INFO 35708 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-08T10:53:35.726+03:00  INFO 35708 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-08T10:53:36.284+03:00  INFO 35708 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table if exists users_table cascade 
+Hibernate: 
+    
+    drop sequence if exists users_table_seq
+Hibernate: create sequence users_table_seq start with 1 increment by 50
+Hibernate: 
+    
+    create table users_table (
+       id bigint not null,
+        email varchar(255),
+        first_name varchar(255),
+        last_name varchar(255),
+        primary key (id)
+    )
+2023-04-08T10:53:37.185+03:00  INFO 35708 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-08T10:53:37.194+03:00  INFO 35708 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-08T10:53:37.923+03:00  WARN 35708 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-08T10:53:38.772+03:00  INFO 35708 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-04-08T10:53:38.921+03:00  INFO 35708 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path ''
+2023-04-08T10:53:38.951+03:00  INFO 35708 --- [           main] c.t.s.r.RestKotlinApplicationKt          : Started RestKotlinApplicationKt in 8.975 seconds (process running for 10.139)
+Hibernate: 
+    select
+        next value for users_table_seq
+Hibernate: 
+    select
+        next value for users_table_seq
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users_table
+        (email, first_name, last_name, id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users_table u1_0
+Users Saved into DB :: 4
+2023-04-08T10:54:39.425+03:00  INFO 35708 --- [nio-8002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-08T10:54:39.426+03:00  INFO 35708 --- [nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-08T10:54:39.428+03:00  INFO 35708 --- [nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
