@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
-nohup java -jar ../target/kotlin-rest.jar &
+nohup java -jar ./kotlin-rest.jar &
 exec $@
